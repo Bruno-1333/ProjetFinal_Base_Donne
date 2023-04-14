@@ -30,40 +30,44 @@
         {
             tabTaches = new TabControl();
             tabEmployes = new TabPage();
+            dataGridEmployes = new DataGridView();
+            txtTelephone = new TextBox();
+            lblTelephone = new Label();
+            txtCourriel = new TextBox();
+            lblCourriel = new Label();
+            txtAdresse = new TextBox();
+            lblAdresse = new Label();
+            txtPrenom = new TextBox();
+            lblPrenom = new Label();
+            txtNom = new TextBox();
+            lblNom = new Label();
+            txtNumero = new TextBox();
             lblNumero = new Label();
             btnAfficherList = new Button();
             btnModifier = new Button();
             btnSupprimer = new Button();
             btnAjouter = new Button();
             tabProjets = new TabPage();
-            tabTach = new TabPage();
-            txtNumero = new TextBox();
-            txtNom = new TextBox();
-            lblNom = new Label();
-            txtPrenon = new TextBox();
-            lblPrenom = new Label();
-            txtAdresse = new TextBox();
-            lblAdresse = new Label();
-            txtCourriel = new TextBox();
-            lblCourriel = new Label();
-            txtTelephone = new TextBox();
-            lblTelephone = new Label();
-            dataGridEmployes = new DataGridView();
             dataGridProjets = new DataGridView();
             txtHPrevues = new TextBox();
             lblHeures = new Label();
             txtTitreProjets = new TextBox();
             lblTitre = new Label();
-            txtNumeroTaches = new TextBox();
+            txtNumeroProjet = new TextBox();
             lblNumeroProjets = new Label();
             btnAfficherListe = new Button();
             btnModifierProjets = new Button();
             btnSupprimerProjets = new Button();
             btnAjouterProjets = new Button();
+            tabTach = new TabPage();
+            lblProjeTaches2 = new Label();
+            comboProjet = new ComboBox();
+            comboBoxEmploye = new ComboBox();
+            comboBoxProjet = new ComboBox();
             dataGridTaches = new DataGridView();
             txtCourrielTaches = new TextBox();
             lblHPrevues = new Label();
-            txtTitre = new TextBox();
+            txtSemaine = new TextBox();
             lblTitreTaches = new Label();
             lblEmploye = new Label();
             lblProjet = new Label();
@@ -73,15 +77,12 @@
             btnModifierTaches = new Button();
             btnSupprimerTaches = new Button();
             btnAjouterTaches = new Button();
-            comboBoxProjet = new ComboBox();
-            comboBoxEmploye = new ComboBox();
-            comboProjet = new ComboBox();
             tabTaches.SuspendLayout();
             tabEmployes.SuspendLayout();
-            tabProjets.SuspendLayout();
-            tabTach.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridEmployes).BeginInit();
+            tabProjets.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridProjets).BeginInit();
+            tabTach.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridTaches).BeginInit();
             SuspendLayout();
             // 
@@ -105,7 +106,7 @@
             tabEmployes.Controls.Add(lblCourriel);
             tabEmployes.Controls.Add(txtAdresse);
             tabEmployes.Controls.Add(lblAdresse);
-            tabEmployes.Controls.Add(txtPrenon);
+            tabEmployes.Controls.Add(txtPrenom);
             tabEmployes.Controls.Add(lblPrenom);
             tabEmployes.Controls.Add(txtNom);
             tabEmployes.Controls.Add(lblNom);
@@ -122,6 +123,113 @@
             tabEmployes.TabIndex = 0;
             tabEmployes.Text = "Employes";
             tabEmployes.UseVisualStyleBackColor = true;
+            // 
+            // dataGridEmployes
+            // 
+            dataGridEmployes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridEmployes.Location = new Point(647, 87);
+            dataGridEmployes.Name = "dataGridEmployes";
+            dataGridEmployes.RowTemplate.Height = 25;
+            dataGridEmployes.Size = new Size(494, 402);
+            dataGridEmployes.TabIndex = 16;
+            // 
+            // txtTelephone
+            // 
+            txtTelephone.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txtTelephone.Location = new Point(122, 360);
+            txtTelephone.Name = "txtTelephone";
+            txtTelephone.Size = new Size(224, 26);
+            txtTelephone.TabIndex = 15;
+            // 
+            // lblTelephone
+            // 
+            lblTelephone.AutoSize = true;
+            lblTelephone.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblTelephone.Location = new Point(22, 368);
+            lblTelephone.Name = "lblTelephone";
+            lblTelephone.Size = new Size(79, 18);
+            lblTelephone.TabIndex = 14;
+            lblTelephone.Text = "Telephone";
+            // 
+            // txtCourriel
+            // 
+            txtCourriel.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txtCourriel.Location = new Point(122, 290);
+            txtCourriel.Name = "txtCourriel";
+            txtCourriel.Size = new Size(224, 26);
+            txtCourriel.TabIndex = 13;
+            // 
+            // lblCourriel
+            // 
+            lblCourriel.AutoSize = true;
+            lblCourriel.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblCourriel.Location = new Point(22, 298);
+            lblCourriel.Name = "lblCourriel";
+            lblCourriel.Size = new Size(63, 18);
+            lblCourriel.TabIndex = 12;
+            lblCourriel.Text = "Courriel";
+            // 
+            // txtAdresse
+            // 
+            txtAdresse.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txtAdresse.Location = new Point(122, 231);
+            txtAdresse.Name = "txtAdresse";
+            txtAdresse.Size = new Size(224, 26);
+            txtAdresse.TabIndex = 11;
+            // 
+            // lblAdresse
+            // 
+            lblAdresse.AutoSize = true;
+            lblAdresse.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblAdresse.Location = new Point(22, 239);
+            lblAdresse.Name = "lblAdresse";
+            lblAdresse.Size = new Size(67, 18);
+            lblAdresse.TabIndex = 10;
+            lblAdresse.Text = "Adresse";
+            // 
+            // txtPrenom
+            // 
+            txtPrenom.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txtPrenom.Location = new Point(122, 172);
+            txtPrenom.Name = "txtPrenom";
+            txtPrenom.Size = new Size(224, 26);
+            txtPrenom.TabIndex = 9;
+            // 
+            // lblPrenom
+            // 
+            lblPrenom.AutoSize = true;
+            lblPrenom.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblPrenom.Location = new Point(22, 180);
+            lblPrenom.Name = "lblPrenom";
+            lblPrenom.Size = new Size(63, 18);
+            lblPrenom.TabIndex = 8;
+            lblPrenom.Text = "Prénom";
+            // 
+            // txtNom
+            // 
+            txtNom.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txtNom.Location = new Point(122, 121);
+            txtNom.Name = "txtNom";
+            txtNom.Size = new Size(224, 26);
+            txtNom.TabIndex = 7;
+            // 
+            // lblNom
+            // 
+            lblNom.AutoSize = true;
+            lblNom.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblNom.Location = new Point(22, 129);
+            lblNom.Name = "lblNom";
+            lblNom.Size = new Size(41, 18);
+            lblNom.TabIndex = 6;
+            lblNom.Text = "Nom";
+            // 
+            // txtNumero
+            // 
+            txtNumero.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txtNumero.Location = new Point(122, 69);
+            txtNumero.Name = "txtNumero";
+            txtNumero.Size = new Size(224, 26);
+            txtNumero.TabIndex = 5;
             // 
             // lblNumero
             // 
@@ -142,6 +250,7 @@
             btnAfficherList.TabIndex = 3;
             btnAfficherList.Text = "Afficher List";
             btnAfficherList.UseVisualStyleBackColor = true;
+            btnAfficherList.Click += btnAfficherList_Click;
             // 
             // btnModifier
             // 
@@ -152,6 +261,7 @@
             btnModifier.TabIndex = 2;
             btnModifier.Text = "Modifier";
             btnModifier.UseVisualStyleBackColor = true;
+            btnModifier.Click += btnModifier_Click;
             // 
             // btnSupprimer
             // 
@@ -162,6 +272,7 @@
             btnSupprimer.TabIndex = 1;
             btnSupprimer.Text = "Supprimer";
             btnSupprimer.UseVisualStyleBackColor = true;
+            btnSupprimer.Click += btnSupprimer_Click;
             // 
             // btnAjouter
             // 
@@ -172,6 +283,7 @@
             btnAjouter.TabIndex = 0;
             btnAjouter.Text = "Ajouter";
             btnAjouter.UseVisualStyleBackColor = true;
+            btnAjouter.Click += btnAjouter_Click;
             // 
             // tabProjets
             // 
@@ -180,7 +292,7 @@
             tabProjets.Controls.Add(lblHeures);
             tabProjets.Controls.Add(txtTitreProjets);
             tabProjets.Controls.Add(lblTitre);
-            tabProjets.Controls.Add(txtNumeroTaches);
+            tabProjets.Controls.Add(txtNumeroProjet);
             tabProjets.Controls.Add(lblNumeroProjets);
             tabProjets.Controls.Add(btnAfficherListe);
             tabProjets.Controls.Add(btnModifierProjets);
@@ -193,139 +305,6 @@
             tabProjets.TabIndex = 1;
             tabProjets.Text = "Projets";
             tabProjets.UseVisualStyleBackColor = true;
-            // 
-            // tabTach
-            // 
-            tabTach.Controls.Add(comboProjet);
-            tabTach.Controls.Add(comboBoxEmploye);
-            tabTach.Controls.Add(comboBoxProjet);
-            tabTach.Controls.Add(dataGridTaches);
-            tabTach.Controls.Add(txtCourrielTaches);
-            tabTach.Controls.Add(lblHPrevues);
-            tabTach.Controls.Add(txtTitre);
-            tabTach.Controls.Add(lblTitreTaches);
-            tabTach.Controls.Add(lblEmploye);
-            tabTach.Controls.Add(lblProjet);
-            tabTach.Controls.Add(txtIdTache);
-            tabTach.Controls.Add(lblIdTache);
-            tabTach.Controls.Add(btnRechercher);
-            tabTach.Controls.Add(btnModifierTaches);
-            tabTach.Controls.Add(btnSupprimerTaches);
-            tabTach.Controls.Add(btnAjouterTaches);
-            tabTach.Location = new Point(4, 24);
-            tabTach.Name = "tabTach";
-            tabTach.Padding = new Padding(3);
-            tabTach.Size = new Size(1164, 529);
-            tabTach.TabIndex = 2;
-            tabTach.Text = "Taches";
-            tabTach.UseVisualStyleBackColor = true;
-            // 
-            // txtNumero
-            // 
-            txtNumero.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtNumero.Location = new Point(122, 69);
-            txtNumero.Name = "txtNumero";
-            txtNumero.Size = new Size(224, 26);
-            txtNumero.TabIndex = 5;
-            // 
-            // txtNom
-            // 
-            txtNom.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtNom.Location = new Point(122, 121);
-            txtNom.Name = "txtNom";
-            txtNom.Size = new Size(224, 26);
-            txtNom.TabIndex = 7;
-            // 
-            // lblNom
-            // 
-            lblNom.AutoSize = true;
-            lblNom.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lblNom.Location = new Point(22, 129);
-            lblNom.Name = "lblNom";
-            lblNom.Size = new Size(41, 18);
-            lblNom.TabIndex = 6;
-            lblNom.Text = "Nom";
-            // 
-            // txtPrenon
-            // 
-            txtPrenon.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtPrenon.Location = new Point(122, 172);
-            txtPrenon.Name = "txtPrenon";
-            txtPrenon.Size = new Size(224, 26);
-            txtPrenon.TabIndex = 9;
-            // 
-            // lblPrenom
-            // 
-            lblPrenom.AutoSize = true;
-            lblPrenom.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lblPrenom.Location = new Point(22, 180);
-            lblPrenom.Name = "lblPrenom";
-            lblPrenom.Size = new Size(63, 18);
-            lblPrenom.TabIndex = 8;
-            lblPrenom.Text = "Prénom";
-            // 
-            // txtAdresse
-            // 
-            txtAdresse.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtAdresse.Location = new Point(122, 231);
-            txtAdresse.Name = "txtAdresse";
-            txtAdresse.Size = new Size(224, 26);
-            txtAdresse.TabIndex = 11;
-            // 
-            // lblAdresse
-            // 
-            lblAdresse.AutoSize = true;
-            lblAdresse.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lblAdresse.Location = new Point(22, 239);
-            lblAdresse.Name = "lblAdresse";
-            lblAdresse.Size = new Size(67, 18);
-            lblAdresse.TabIndex = 10;
-            lblAdresse.Text = "Adresse";
-            // 
-            // txtCourriel
-            // 
-            txtCourriel.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtCourriel.Location = new Point(122, 290);
-            txtCourriel.Name = "txtCourriel";
-            txtCourriel.Size = new Size(224, 26);
-            txtCourriel.TabIndex = 13;
-            // 
-            // lblCourriel
-            // 
-            lblCourriel.AutoSize = true;
-            lblCourriel.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lblCourriel.Location = new Point(22, 298);
-            lblCourriel.Name = "lblCourriel";
-            lblCourriel.Size = new Size(63, 18);
-            lblCourriel.TabIndex = 12;
-            lblCourriel.Text = "Courriel";
-            // 
-            // txtTelephone
-            // 
-            txtTelephone.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtTelephone.Location = new Point(122, 360);
-            txtTelephone.Name = "txtTelephone";
-            txtTelephone.Size = new Size(224, 26);
-            txtTelephone.TabIndex = 15;
-            // 
-            // lblTelephone
-            // 
-            lblTelephone.AutoSize = true;
-            lblTelephone.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lblTelephone.Location = new Point(22, 368);
-            lblTelephone.Name = "lblTelephone";
-            lblTelephone.Size = new Size(79, 18);
-            lblTelephone.TabIndex = 14;
-            lblTelephone.Text = "Telephone";
-            // 
-            // dataGridEmployes
-            // 
-            dataGridEmployes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridEmployes.Location = new Point(647, 87);
-            dataGridEmployes.Name = "dataGridEmployes";
-            dataGridEmployes.RowTemplate.Height = 25;
-            dataGridEmployes.Size = new Size(494, 402);
-            dataGridEmployes.TabIndex = 16;
             // 
             // dataGridProjets
             // 
@@ -372,13 +351,13 @@
             lblTitre.TabIndex = 23;
             lblTitre.Text = "Titre";
             // 
-            // txtNumeroTaches
+            // txtNumeroProjet
             // 
-            txtNumeroTaches.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtNumeroTaches.Location = new Point(166, 76);
-            txtNumeroTaches.Name = "txtNumeroTaches";
-            txtNumeroTaches.Size = new Size(224, 26);
-            txtNumeroTaches.TabIndex = 22;
+            txtNumeroProjet.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txtNumeroProjet.Location = new Point(166, 76);
+            txtNumeroProjet.Name = "txtNumeroProjet";
+            txtNumeroProjet.Size = new Size(224, 26);
+            txtNumeroProjet.TabIndex = 22;
             // 
             // lblNumeroProjets
             // 
@@ -399,6 +378,7 @@
             btnAfficherListe.TabIndex = 20;
             btnAfficherListe.Text = "Afficher Liste";
             btnAfficherListe.UseVisualStyleBackColor = true;
+            btnAfficherListe.Click += btnAfficherListe_Click;
             // 
             // btnModifierProjets
             // 
@@ -409,6 +389,7 @@
             btnModifierProjets.TabIndex = 19;
             btnModifierProjets.Text = "Modifier";
             btnModifierProjets.UseVisualStyleBackColor = true;
+            btnModifierProjets.Click += btnModifierProjets_Click;
             // 
             // btnSupprimerProjets
             // 
@@ -419,6 +400,7 @@
             btnSupprimerProjets.TabIndex = 18;
             btnSupprimerProjets.Text = "Supprimer";
             btnSupprimerProjets.UseVisualStyleBackColor = true;
+            btnSupprimerProjets.Click += btnSupprimerProjets_Click;
             // 
             // btnAjouterProjets
             // 
@@ -429,6 +411,67 @@
             btnAjouterProjets.TabIndex = 17;
             btnAjouterProjets.Text = "Ajouter";
             btnAjouterProjets.UseVisualStyleBackColor = true;
+            btnAjouterProjets.Click += btnAjouterProjets_Click;
+            // 
+            // tabTach
+            // 
+            tabTach.Controls.Add(lblProjeTaches2);
+            tabTach.Controls.Add(comboProjet);
+            tabTach.Controls.Add(comboBoxEmploye);
+            tabTach.Controls.Add(comboBoxProjet);
+            tabTach.Controls.Add(dataGridTaches);
+            tabTach.Controls.Add(txtCourrielTaches);
+            tabTach.Controls.Add(lblHPrevues);
+            tabTach.Controls.Add(txtSemaine);
+            tabTach.Controls.Add(lblTitreTaches);
+            tabTach.Controls.Add(lblEmploye);
+            tabTach.Controls.Add(lblProjet);
+            tabTach.Controls.Add(txtIdTache);
+            tabTach.Controls.Add(lblIdTache);
+            tabTach.Controls.Add(btnRechercher);
+            tabTach.Controls.Add(btnModifierTaches);
+            tabTach.Controls.Add(btnSupprimerTaches);
+            tabTach.Controls.Add(btnAjouterTaches);
+            tabTach.Location = new Point(4, 24);
+            tabTach.Name = "tabTach";
+            tabTach.Padding = new Padding(3);
+            tabTach.Size = new Size(1164, 529);
+            tabTach.TabIndex = 2;
+            tabTach.Text = "Taches";
+            tabTach.UseVisualStyleBackColor = true;
+            // 
+            // lblProjeTaches2
+            // 
+            lblProjeTaches2.AutoSize = true;
+            lblProjeTaches2.Location = new Point(633, 51);
+            lblProjeTaches2.Name = "lblProjeTaches2";
+            lblProjeTaches2.Size = new Size(38, 15);
+            lblProjeTaches2.TabIndex = 37;
+            lblProjeTaches2.Text = "Projet";
+            // 
+            // comboProjet
+            // 
+            comboProjet.FormattingEnabled = true;
+            comboProjet.Location = new Point(702, 48);
+            comboProjet.Name = "comboProjet";
+            comboProjet.Size = new Size(224, 23);
+            comboProjet.TabIndex = 36;
+            // 
+            // comboBoxEmploye
+            // 
+            comboBoxEmploye.FormattingEnabled = true;
+            comboBoxEmploye.Location = new Point(166, 187);
+            comboBoxEmploye.Name = "comboBoxEmploye";
+            comboBoxEmploye.Size = new Size(224, 23);
+            comboBoxEmploye.TabIndex = 35;
+            // 
+            // comboBoxProjet
+            // 
+            comboBoxProjet.FormattingEnabled = true;
+            comboBoxProjet.Location = new Point(166, 131);
+            comboBoxProjet.Name = "comboBoxProjet";
+            comboBoxProjet.Size = new Size(224, 23);
+            comboBoxProjet.TabIndex = 34;
             // 
             // dataGridTaches
             // 
@@ -442,7 +485,7 @@
             // txtCourrielTaches
             // 
             txtCourrielTaches.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtCourrielTaches.Location = new Point(123, 297);
+            txtCourrielTaches.Location = new Point(166, 302);
             txtCourrielTaches.Name = "txtCourrielTaches";
             txtCourrielTaches.Size = new Size(224, 26);
             txtCourrielTaches.TabIndex = 30;
@@ -453,17 +496,17 @@
             lblHPrevues.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point);
             lblHPrevues.Location = new Point(23, 305);
             lblHPrevues.Name = "lblHPrevues";
-            lblHPrevues.Size = new Size(63, 18);
+            lblHPrevues.Size = new Size(134, 18);
             lblHPrevues.TabIndex = 29;
-            lblHPrevues.Text = "Courriel";
+            lblHPrevues.Text = "lblHeures Prevues";
             // 
-            // txtTitre
+            // txtSemaine
             // 
-            txtTitre.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtTitre.Location = new Point(123, 238);
-            txtTitre.Name = "txtTitre";
-            txtTitre.Size = new Size(224, 26);
-            txtTitre.TabIndex = 28;
+            txtSemaine.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txtSemaine.Location = new Point(166, 238);
+            txtSemaine.Name = "txtSemaine";
+            txtSemaine.Size = new Size(224, 26);
+            txtSemaine.TabIndex = 28;
             // 
             // lblTitreTaches
             // 
@@ -471,9 +514,9 @@
             lblTitreTaches.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point);
             lblTitreTaches.Location = new Point(23, 246);
             lblTitreTaches.Name = "lblTitreTaches";
-            lblTitreTaches.Size = new Size(38, 18);
+            lblTitreTaches.Size = new Size(71, 18);
             lblTitreTaches.TabIndex = 27;
-            lblTitreTaches.Text = "Titre";
+            lblTitreTaches.Text = "Semaine";
             // 
             // lblEmploye
             // 
@@ -498,7 +541,7 @@
             // txtIdTache
             // 
             txtIdTache.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtIdTache.Location = new Point(123, 76);
+            txtIdTache.Location = new Point(166, 76);
             txtIdTache.Name = "txtIdTache";
             txtIdTache.Size = new Size(224, 26);
             txtIdTache.TabIndex = 22;
@@ -522,6 +565,7 @@
             btnRechercher.TabIndex = 20;
             btnRechercher.Text = "Rechercher";
             btnRechercher.UseVisualStyleBackColor = true;
+            btnRechercher.Click += btnRechercher_Click;
             // 
             // btnModifierTaches
             // 
@@ -532,6 +576,7 @@
             btnModifierTaches.TabIndex = 19;
             btnModifierTaches.Text = "Modifier";
             btnModifierTaches.UseVisualStyleBackColor = true;
+            btnModifierTaches.Click += btnModifierTaches_Click;
             // 
             // btnSupprimerTaches
             // 
@@ -542,6 +587,7 @@
             btnSupprimerTaches.TabIndex = 18;
             btnSupprimerTaches.Text = "Supprimer";
             btnSupprimerTaches.UseVisualStyleBackColor = true;
+            btnSupprimerTaches.Click += btnSupprimerTaches_Click;
             // 
             // btnAjouterTaches
             // 
@@ -552,30 +598,7 @@
             btnAjouterTaches.TabIndex = 17;
             btnAjouterTaches.Text = "Ajouter";
             btnAjouterTaches.UseVisualStyleBackColor = true;
-            // 
-            // comboBoxProjet
-            // 
-            comboBoxProjet.FormattingEnabled = true;
-            comboBoxProjet.Location = new Point(123, 131);
-            comboBoxProjet.Name = "comboBoxProjet";
-            comboBoxProjet.Size = new Size(224, 23);
-            comboBoxProjet.TabIndex = 34;
-            // 
-            // comboBoxEmploye
-            // 
-            comboBoxEmploye.FormattingEnabled = true;
-            comboBoxEmploye.Location = new Point(123, 187);
-            comboBoxEmploye.Name = "comboBoxEmploye";
-            comboBoxEmploye.Size = new Size(224, 23);
-            comboBoxEmploye.TabIndex = 35;
-            // 
-            // comboProjet
-            // 
-            comboProjet.FormattingEnabled = true;
-            comboProjet.Location = new Point(702, 48);
-            comboProjet.Name = "comboProjet";
-            comboProjet.Size = new Size(224, 23);
-            comboProjet.TabIndex = 36;
+            btnAjouterTaches.Click += btnAjouterTaches_Click;
             // 
             // Form1
             // 
@@ -589,12 +612,12 @@
             tabTaches.ResumeLayout(false);
             tabEmployes.ResumeLayout(false);
             tabEmployes.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridEmployes).EndInit();
             tabProjets.ResumeLayout(false);
             tabProjets.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridProjets).EndInit();
             tabTach.ResumeLayout(false);
             tabTach.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridEmployes).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridProjets).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridTaches).EndInit();
             ResumeLayout(false);
         }
@@ -616,7 +639,7 @@
         private Label lblCourriel;
         private TextBox txtAdresse;
         private Label lblAdresse;
-        private TextBox txtPrenon;
+        private TextBox txtPrenom;
         private Label lblPrenom;
         private TextBox txtNom;
         private Label lblNom;
@@ -627,7 +650,7 @@
         private Label lblHeures;
         private TextBox txtTitreProjets;
         private Label lblTitre;
-        private TextBox txtNumeroTaches;
+        private TextBox txtNumeroProjet;
         private Label lblNumeroProjets;
         private Button btnAfficherListe;
         private Button btnModifierProjets;
@@ -639,7 +662,7 @@
         private DataGridView dataGridTaches;
         private TextBox txtCourrielTaches;
         private Label lblHPrevues;
-        private TextBox txtTitre;
+        private TextBox txtSemaine;
         private Label lblTitreTaches;
         private Label lblEmploye;
         private Label lblProjet;
@@ -649,5 +672,6 @@
         private Button btnModifierTaches;
         private Button btnSupprimerTaches;
         private Button btnAjouterTaches;
+        private Label lblProjeTaches2;
     }
 }

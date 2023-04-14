@@ -238,6 +238,35 @@ public class ProjetFinalDbContext
         }
     }
 
+    
+    public List<Taches> GetTachesParProjet(int numProjet)
+    {
+        List<Taches> taches = new List<Taches>();
+        using (SqlConnection connection = new SqlConnection(ConnectionString))
+        {
+            string query = "SELECT * FROM Taches WHERE numprojet=@numprojet";
+            using (SqlCommand command = new SqlCommand(query, connection))
+            {
+                command.Parameters.AddWithValue("@numprojet", numProjet);
+                connection.Open();
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        Taches tache = new Taches();
+                        tache.Id = (int)reader["id"];
+                        tache.NumProjet = (int)reader["numprojet"];
+                        tache.NumEmp = (int)reader["numemp"];
+                        tache.Semaine = (int)reader["semaine"];
+                        tache.NbHeures = (int)reader["nbheures"];
+                        taches.Add(tache);
+                    }
+                }
+            }
+        }
+        return taches;
+    }
+
 }
 
 
